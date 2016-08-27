@@ -34,6 +34,8 @@
 .tlo
 .tlog
 .vs
+.vcxproj.user
+ipch/
 Debug
 Release
 2016/Git
