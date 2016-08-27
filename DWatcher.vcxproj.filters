@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="DWatcher.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -42,9 +39,6 @@
     <ClInclude Include="LoggerConfig.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FileNotifyInfomation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DelayedDirectoryChangeHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -66,6 +60,9 @@
     <ClInclude Include="DirChangeNotification.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FileNotifyInformation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DWatcher.cpp">
@@ -81,9 +78,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PrivilegeEnabler.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FileNotifyInfomation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DelayedDirectoryChangeHandler.cpp">
@@ -107,6 +101,9 @@
     <ClCompile Include="DirChangeNotification.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FileNotifyInformation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DWatcher.rc">
@@ -117,6 +114,7 @@
     <None Include="res\DWatcher.rc2">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\DWatcher.ico">

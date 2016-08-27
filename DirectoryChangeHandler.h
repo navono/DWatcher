@@ -2,6 +2,7 @@
 #include "DirectoryChangeWatcher.h"
 #include "DelayedDirectoryChangeHandler.h"
 #include <memory>
+#include <mutex>
 
 
 /***********************************
@@ -262,12 +263,12 @@ private:
 	//
 	friend class CDelayedDirectoryChangeHandler;
 
-	std::unique_ptr<CDirectoryChangeWatcher> _pDirChangeWatcher;
-	CRITICAL_SECTION		_csWatcher;
+	std::shared_ptr<CDirectoryChangeWatcher>	_pDirChangeWatcher;
+	std::mutex									_mutWatcher;
 
 private:
-	long	_ReferencesWatcher(CDirectoryChangeWatcher *pDirChangeWatcher);
-	long	_ReleaseReferenceToWatcher(CDirectoryChangeWatcher *pDirChangeWatcher);
+	long	_ReferencesWatcher(std::shared_ptr<CDirectoryChangeWatcher> pDirChangeWatcher);
+	long	_ReleaseReferenceToWatcher(std::shared_ptr<CDirectoryChangeWatcher> pDirChangeWatcher);
 
 };
 

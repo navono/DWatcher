@@ -15,6 +15,13 @@
 // See DWatcher.cpp for the implementation of this class
 //
 
+inline static BOOL IsDirectory(const CString& path)
+{
+	auto dwAttri = GetFileAttributes(path);
+	return ((dwAttri != 0xffffffff
+		&& (dwAttri & FILE_ATTRIBUTE_DIRECTORY)));
+}
+
 class CDWatcherApp : public CWinApp
 {
 public:

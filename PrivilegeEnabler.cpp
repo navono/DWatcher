@@ -26,13 +26,6 @@ BOOL EnablePrivilege(LPCTSTR pszPrivilegeName, BOOL fEnable /*= TRUE*/)
 	return fRet;
 }
 
-BOOL IsDirectory(const CString& path)
-{
-	auto dwAttri = GetFileAttributes(path);
-	return ((dwAttri != 0xffffffff
-		    && (dwAttri & FILE_ATTRIBUTE_DIRECTORY)));
-}
-
 CPrivilegeEnabler::CPrivilegeEnabler()
 {
 	std::vector<LPCTSTR> privilegeNames

@@ -44,7 +44,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -118,7 +118,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;CHANGE_G3LOG_DEBUG_TO_DBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
@@ -194,9 +194,6 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="DelayedDirectoryChangeHandler.h" />
     <ClInclude Include="DelayedNotificationThread.h" />
     <ClInclude Include="DelayedNotificationWindow.h" />
@@ -206,7 +203,7 @@
     <ClInclude Include="DirectoryChangeWatcher.h" />
     <ClInclude Include="DWatcher.h" />
     <ClInclude Include="DWatcherDlg.h" />
-    <ClInclude Include="FileNotifyInfomation.h" />
+    <ClInclude Include="FileNotifyInformation.h" />
     <ClInclude Include="FolderDialog.h" />
     <ClInclude Include="LoggerConfig.h" />
     <ClInclude Include="PrivilegeEnabler.h" />
@@ -224,7 +221,7 @@
     <ClCompile Include="DirectoryChangeWatcher.cpp" />
     <ClCompile Include="DWatcher.cpp" />
     <ClCompile Include="DWatcherDlg.cpp" />
-    <ClCompile Include="FileNotifyInfomation.cpp" />
+    <ClCompile Include="FileNotifyInformation.cpp" />
     <ClCompile Include="FolderDialog.cpp" />
     <ClCompile Include="PrivilegeEnabler.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -238,6 +235,7 @@
     <ResourceCompile Include="DWatcher.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.md" />
     <None Include="res\DWatcher.rc2" />
   </ItemGroup>
   <ItemGroup>

@@ -24,7 +24,7 @@ public:
 	virtual ~CFolderDialog();
 
 public:
-	virtual int		DoModal(void);
+	virtual INT_PTR		DoModal(void);
 	
 public:	
 	AFX_INLINE LPCTSTR	GetFolderPath(void) const;

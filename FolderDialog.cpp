@@ -60,7 +60,7 @@ END_MESSAGE_MAP()
 
 // CFolderDialog message handlers
 
-int CFolderDialog::DoModal(void)
+INT_PTR CFolderDialog::DoModal(void)
 {
 	ASSERT_VALID(this);	
 	ASSERT(m_bi.lpfn != nullptr);

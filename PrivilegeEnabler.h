@@ -2,7 +2,6 @@
 
 // Helper functions
 static BOOL EnablePrivilege(LPCTSTR pszPrivilegeName, BOOL fEnable = TRUE);
-static BOOL IsDirectory(const CString& path);
 
 class CPrivilegeEnabler
 {
