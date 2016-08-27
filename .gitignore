@@ -34,7 +34,6 @@
 .tlo
 .tlog
 .vs
-.vcxproj.user
 ipch/
 Debug
 Release
@@ -42,3 +41,4 @@ Release
 
 *.opendb
 *.VC.db
+*.vcxproj.user
