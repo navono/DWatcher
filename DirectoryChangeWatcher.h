@@ -124,14 +124,14 @@ public:
 	long	ReleaseReferenceToWatcher(CDirectoryChangeHandler * pChangeHandler);
 
 	BOOL	UnwatchDirectoryBecauseOfError(CDirWatchInfo * pWatchInfo);//called in case of error.
-	int		AddToWatchInfo(CDirWatchInfo * pWatchInfo);
+	int		AddToWatchInfo(std::shared_ptr<CDirWatchInfo> pWatchInfo);
 
 	//
 	//	functions for retrieving the directory watch info based on different parameters
 	//
-	CDirWatchInfo*	GetDirWatchInfo(IN const CString& strDirName, OUT int& ref_nIdx) const;
-	CDirWatchInfo*	GetDirWatchInfo(IN CDirWatchInfo* pWatchInfo, OUT int& ref_nIdx) const;
-	CDirWatchInfo*	GetDirWatchInfo(IN CDirectoryChangeHandler * pChangeHandler, OUT int& ref_nIdx) const;
+	std::shared_ptr<CDirWatchInfo>	GetDirWatchInfo(IN const CString& strDirName, OUT int& ref_nIdx) const;
+	std::shared_ptr<CDirWatchInfo>	GetDirWatchInfo(IN std::shared_ptr<CDirWatchInfo> pWatchInfo, OUT int& ref_nIdx) const;
+	std::shared_ptr<CDirWatchInfo>	GetDirWatchInfo(IN std::shared_ptr<CDirectoryChangeHandler> pChangeHandler, OUT int& ref_nIdx) const;
 
 protected:
 	//All file change notifications has taken place in the context of 
